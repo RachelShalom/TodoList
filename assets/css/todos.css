@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(187, 142, 187);
+}
+
+#container {
+    margin: 0 auto;
+    width: 360px;
+    border: 2px solid salmon;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.done {
+    color: rgb(127, 136, 127);
+    text-decoration: line-through;
+}
+
+.trash {
+    display: none;
+}
