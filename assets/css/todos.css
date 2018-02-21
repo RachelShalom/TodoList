@@ -3,7 +3,7 @@ body {
 }
 
 #container {
-    margin: 0 auto;
+    margin: 100px auto;
     width: 360px;
     border: 2px solid salmon;
 }
