@@ -19,7 +19,7 @@ $("ul").on("click", "li", function(event) {
     $(this).toggleClass("done");
 
 });
-$("ul").on("click", "span", function(event) {
+$("ul").on("click", "div", function(event) {
     var line = $(this).parent();
     console.log(line.text());
     event.stopPropagation();
@@ -29,13 +29,12 @@ $("ul").on("click", "span", function(event) {
     //remove this item from the array
     todos = todos.filter(el => el.text !== line.text().trim());
     console.log(todos);
-
-
-
-
-
 });
 
+// hide the input
+$("span").on("click", function() {
+    $("input").fadeToggle();
+});
 
 
 $("ul").on("mouseenter mouseleave", "li", function(event) {
@@ -59,7 +58,7 @@ function newTodo(chore, i) {
 function displayTodos() {
     $(" ul li").remove();
     todos.forEach(function(element, i) {
-        $("ul").append("<li> <span class=\"trash\"> <i class=\"far fa-trash-alt\"></i> </span>" + element.text + "</li>");
+        $("ul").append("<li> <div class=\"trash\"> <i class=\"far fa-trash-alt\"></i> </div>" + element.text + "</li>");
     });
 
 }
